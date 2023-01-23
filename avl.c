@@ -33,7 +33,6 @@ int _abs(int x) {
 }
 
 
-// Search in avl
 AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 	AVLNodePtr tempRoot = root;
 
@@ -42,14 +41,13 @@ AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 			tempRoot = tempRoot->child[RIGHT];
 		} else if (tempRoot->key > x) {
 			tempRoot = tempRoot->child[LEFT];
+		} else if (tempRoot->y == y) {
+			return tempRoot; // return node
 		} else {
-			if (tempRoot->y == y) {
-				return tempRoot; //return node
-			} else {
-				return NULL;
-			}
+			return NULL;
 		}
 	}
+
 	return NULL;
 }
 
