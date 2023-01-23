@@ -52,7 +52,6 @@ AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 			}
 		}
 	}
-        
 	return NULL;
 }
 
