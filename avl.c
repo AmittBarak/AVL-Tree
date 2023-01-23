@@ -32,7 +32,7 @@ int _abs(int x) {
 	return (x < 0) ? -x : x;
 }
 
-
+// AVL search
 AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 	AVLNodePtr tempRoot = root;
 
