@@ -38,7 +38,6 @@ AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 	AVLNodePtr tempRoot = root;
 
 	while (tempRoot != NULL) {
-		// search
 		if (tempRoot->key < x) {
 			tempRoot = tempRoot->child[RIGHT];
 		} else if (tempRoot->key > x) {
@@ -46,8 +45,7 @@ AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 		} else {
 			if (tempRoot->y == y) {
 				return tempRoot; //return node
-			}
-			else {
+			} else {
 				return NULL;
 			}
 		}
