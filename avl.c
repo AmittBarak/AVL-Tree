@@ -1,6 +1,7 @@
 #include "avl.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 #define NOT_EXISTS -1
 #define TRUE 1
 #define FALSE 0
@@ -24,18 +25,13 @@ AVLNodePtr balance_after_delete(AVLNodePtr newRoot, AVLNodePtr root);
 AVLNodePtr avl_search_by_x(AVLNodePtr root, int x, char elseFind);
 
 
-int _max(int x, int y) {
-	return (x < y) ? y : x;
-}
+int _max(int x, int y) { return (x < y) ? y : x; }
 
-int _abs(int x) {
-	return (x < 0) ? -x : x;
-}
+int _abs(int x) { return (x < 0) ? -x : x; }
 
 // AVL search
 AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 	AVLNodePtr tempRoot = root;
-
 	while (tempRoot != NULL) {
 		if (tempRoot->key < x) {
 			tempRoot = tempRoot->child[RIGHT];
@@ -47,7 +43,6 @@ AVLNodePtr avl_search(AVLNodePtr root, int x, int y) {
 			return NULL;
 		}
 	}
-
 	return NULL;
 }
 
